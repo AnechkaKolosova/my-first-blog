@@ -51,4 +51,5 @@ def delete_new(request,pk):
    return redirect('post_list')
    # post_list(request)
 
+
 # Create your views here.
