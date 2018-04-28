@@ -45,6 +45,10 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
-
+def delete_new(request,pk):
+   #+some code to check if New belongs to logged in user
+   u = Post.objects.get(pk=pk).delete()
+   return redirect('post_list')
+   # post_list(request)
 
 # Create your views here.
